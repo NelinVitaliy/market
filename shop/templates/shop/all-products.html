@@ -1,0 +1,22 @@
+{% extends "shop/base.html" %}
+{% load static %}
+
+<!--{% include 'includes/products_category.html' %}-->
+
+{% block content %}
+<div id="main" class="product-list">
+    <h1>{% if products %}{{ product.name }}{% else %}Products{% endif %}</h1>
+    <div class="product-list-container">
+        {% for product in products %}
+        <div class="col-4 my-2">
+            <div class="item card">
+                <a class="img-container" href="{% url 'shop:product_detail' product.slug %}">
+                    <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static "img/no_image.png" %}{% endif %}">
+                </a>
+                <a href="{% url 'shop:product_by_category' product.slug %}">{{ product.name }}</a><br>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

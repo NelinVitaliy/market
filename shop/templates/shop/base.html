@@ -1,0 +1,406 @@
+{% load categories_tags %}
+{% load static %}
+
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Vitae Market - Healthy taste</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link rel="icon" href="../../static/assets/images/favicon.svg">
+
+    <!-- CSS
+    ============================================ -->
+    <!-- Bootstrap CSS -->
+    <link href="../../static/assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- FontAwesome CSS -->
+    <link href="../../static/assets/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Elegent CSS -->
+    <link href="../../static/assets/css/elegent.min.css" rel="stylesheet">
+
+    <!-- Plugins CSS -->
+    <link href="../../static/assets/css/plugins.css" rel="stylesheet">
+
+    <!-- Helper CSS -->
+    <link href="../../static/assets/css/helper.css" rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link href="../../static/assets/css/main.css" rel="stylesheet">
+
+    <!-- Base CSS  -->
+    <link href="../../static/css/base.css" rel="stylesheet">
+    <!-- Modernizer JS -->
+    <script src="../../static/assets/js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="../../static/assets/js/vendor/jquery.min.js"></script>
+    <script src="../../static/js/main.js"></script>
+
+</head>
+
+<body>
+<!--=============================================
+=            Header         =
+=============================================-->
+
+<header>
+    <!--=======  header top  =======-->
+
+    <!--=======  End of header top  =======-->
+
+    <!--=======  header bottom  =======-->
+
+    <div class="header-bottom header-bottom-one header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-12 col-xs-12 text-lg-left text-md-center text-sm-center">
+                    <!-- logo -->
+                    <div class="logo mt-15 mb-15">
+                        <a href="{% url 'shop:home_list' %}">
+                            <img src="../../static/assets/images/vm-logo.svg" class="img-fluid" alt="">
+                        </a>
+                    </div>
+                    <!-- end of logo -->
+                </div>
+                <div class="col-md-9 col-sm-12 col-xs-12">
+                    <div class="menubar-top d-flex justify-content-between align-items-center flex-sm-wrap flex-md-wrap flex-lg-nowrap mt-sm-15">
+                        <!-- header search bar -->
+                        <div class="">
+{#                            <form action="#">#}
+{#                                <input type="text" placeholder="Поиск">#}
+{#                                <button><span class="icon_search"></span></button>#}
+{#                            </form>#}
+                        </div>
+                        <!-- end of search bar -->
+                        <!-- header phone number -->
+                        <div class="header-contact d-flex">
+                            <div class="phone-icon">
+                                <img src="../../static/assets/images/icon-phone.png" class="img-fluid" alt="">
+                            </div>
+                            <div class="phone-number">
+                                <div class="cart-info d-inline-block">
+                                    <a href="tel:+996551666000"> Звоните нам <br>+996-551-666-000 </a>
+                                </div>
+                            </div>
+                            <!-- end of header phone number -->
+
+                            <!-- cart floating box -->
+
+                            <!-- end of cart floating box -->
+                        </div>
+                    </div>
+
+                    <!-- navigation section -->
+                    <div class="main-menu">
+                        <nav>
+                            <ul>
+                                <li><a href="{% url 'shop:home_list' %}">Главная</a></li>
+                                <li class="active menu"><a href="{% url 'shop:all-products' %}">Интернет-Магазин</a></li>
+                                <li><a href="{% url 'shop:contact_list' %}">Контакты</a></li>
+                                <li><a href="{% url 'shop:wholesalers_list' %}">Оптовый заказ</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <!-- end of navigation section -->
+                </div>
+                <div class="col-12">
+                    <!-- Mobile Menu -->
+                    <div class="mobile-menu d-block d-lg-none"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--=======  End of header bottom  =======-->
+</header>
+
+<!--=====  End of Header  ======-->
+
+<!--=============================================
+=            breadcrumb area         =
+=============================================-->
+
+<div class="breadcrumb-area mb-50">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="breadcrumb-container">
+                    <ul>
+                        <li><a href="{% url 'shop:home_list' %}"><i class="fa fa-home"></i> Главная</a></li>
+                        <li class="active">Магазин</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--=====  End of breadcrumb area  ======-->
+
+
+<!--=============================================
+=            Shop page container         =
+=============================================-->
+
+<div class="shop-page-container mb-50">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 order-2 order-lg-1">
+                <!--=======  sidebar area  =======-->
+
+                <div class="sidebar-area">
+                    <!--=======  single sidebar  =======-->
+
+                    <div class="sidebar mb-35">
+                        <h3 class="sidebar-title">Категории продуктов</h3>
+                        <ul class="product-categories">
+                            <li {% if not category %}class="selected" {% endif %}>
+                                <a class="selected-item" id="all-selected" href="{% url 'shop:all-products' %}">All</a>
+                            </li>
+                            {% for c in categories_context %}
+                            <li {% if category.slug == c.slug %}class="selected" {% endif %}>
+                                <a class="selected-item" id={{c.slug}}
+                                   href="{% url 'shop:product_by_category' c.slug %}">{{ c.name }}</a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9 order-1 order-lg-2 mb-sm-35 mb-xs-35">
+
+                <!--=======  shop page banner  =======-->
+
+                <div class="shop-page-banner mb-35">
+                    <a href="{% url 'shop:home_list' %}">
+                        <img src="../../static/assets/images/banners/shop-banner.jpg" class="img-fluid" alt="">
+                    </a>
+                </div>
+
+                <!--=======  End of shop page banner  =======-->
+
+                <!--=======  Shop header  =======-->
+
+                <div class="shop-header mb-35">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-12 d-flex align-items-center">
+                            <!--=======  view mode  =======-->
+
+                            <div class="view-mode-icons mb-xs-10">
+                                <a class="active" href="#" data-target="grid"><i class="fa fa-th"></i></a>
+                                <a href="#" data-target="list"><i class="fa fa-list"></i></a>
+                            </div>
+
+                            <!--=======  End of view mode  =======-->
+
+                        </div>
+                        <div class="col-lg-8 col-md-8 col-sm-12 d-flex flex-column flex-sm-row justify-content-between align-items-left align-items-sm-center">
+                            <!--=======  Sort by dropdown  =======-->
+
+                            <div class="sort-by-dropdown d-flex align-items-center mb-xs-10">
+                                <p class="mr-10">Cортировать по: </p>
+                                <select name="sort-by" id="sort-by" class="nice-select">
+                                    <option value="0">Популярности</option>
+                                    <option value="0">По Цене: от низкой к высокой</option>
+                                    <option value="0">По Цене: от высокой к низкой</option>
+                                </select>
+                            </div>
+
+                            <!--=======  End of Sort by dropdown  =======-->
+
+                            <p class="result-show-message">Отображение результатов</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!--=======  End of Shop header  =======-->
+
+                <!--=======  Grid list view  =======-->
+
+                <div class="shop-product-wrap mb-35">
+
+                    <!--=======  Grid view product  =======-->
+                    {% block content %}
+                    {% endblock %}
+                </div>
+                <!--=======  End of Grid list view  =======-->
+                <!--=======  Pagination container  =======-->
+
+                <!--=======  Slaider container  =======-->
+                {% block slider %}
+                {% endblock %}
+
+                <!--=======  End of Slaider container  =======-->
+
+
+                <!--=======  Pagination container  =======-->
+
+                {% include 'includes/pagination.html' %}
+
+                <!--=======  End of Pagination container  =======-->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--=====  End of Shop page container  ======-->
+
+
+<!--=============================================
+=            Footer         =
+=============================================-->
+
+<footer>
+    <!--=======  newsletter section  =======-->
+
+    <div class="newsletter-section pt-50 pb-50">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-12 col-sm-12 mb-sm-20 mb-xs-20">
+                    <!--=======  newsletter title =======-->
+
+                    <div class="newsletter-title">
+                        <h1>
+                            <img src="../../static/assets/images/icon-newsletter.png" alt="">
+                            <!--                            <a href="tel:+996551666000"> Напишите Нам <br> WhatsApp </a>-->
+                            <a href="https://wa.me/996551666000"> Напишите Нам в <br> WhatsApp </a>
+                        </h1>
+                        </h1>
+                    </div>
+
+                    <!--=======  End of newsletter title  =======-->
+                </div>
+
+                <div class="col-lg-8 col-md-12 col-sm-12">
+                    <!--=======  subscription-form wrapper  =======-->
+
+                    <div class="subscription-form-wrapper d-flex flex-wrap flex-sm-nowrap">
+                        <p class="mb-xs-20">Подпишитесь на нашу рассылку, чтобы получать последние новости</p>
+                        <div class="subscription-form">
+                            <form id="mc-form" class="mc-form subscribe-form">
+                                <input type="email" id="mc-email" autocomplete="off" placeholder="Ваш email">
+                                <button id="mc-submit" type="submit">Подписывайся!</button>
+                            </form>
+
+                            <!--                            &lt;!&ndash; mailchimp-alerts Start &ndash;&gt;-->
+                            <!--                            <div class="mailchimp-alerts">-->
+                            <!--                                <div class="mailchimp-submitting"></div>-->
+                            <!--                                &lt;!&ndash; mailchimp-submitting end &ndash;&gt;-->
+                            <!--                                <div class="mailchimp-success"></div>-->
+                            <!--                                &lt;!&ndash; mailchimp-success end &ndash;&gt;-->
+                            <!--                                <div class="mailchimp-error"></div>-->
+                            <!--                                &lt;!&ndash; mailchimp-error end &ndash;&gt;-->
+                            <!--                            </div>-->
+                            <!--                            &lt;!&ndash; mailchimp-alerts end &ndash;&gt;-->
+                        </div>
+                    </div>
+
+                    <!--=======  End of subscription-form wrapper  =======-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--=======  End of newsletter section  =======-->
+
+    <!--=======  social contact section  =======-->
+
+    <div class="social-contact-section pt-50 pb-50">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-12 order-2 order-md-2 order-sm-2 order-lg-1">
+                    <!--=======  social media links  =======-->
+
+                    <div class="social-media-section">
+                        <h2>Подпишитесь на нас </h2>
+                        <div class="social-links">
+                            <a class="facebook" href="https://www.facebook.com/profile.php?id=100026075733249" data-tooltip="Facebook"><i
+                                    class="fa fa-facebook"></i></a>
+                            <a class="instagram" href="https://www.instagram.com/vitaemarket_/" data-tooltip="Instagram"><i
+                                    class="fa fa-instagram"></i></a>
+
+
+                        </div>
+                    </div>
+
+                    <!--=======  End of social media links  =======-->
+
+                </div>
+                <div class="col-lg-8 col-md-12 order-1 order-md-1 order-sm-1 order-lg-2  mb-sm-50 mb-xs-50">
+                    <!--=======  contact summery  =======-->
+
+                    <div class="contact-summery">
+                        <h2>Связаться с нами</h2>
+
+                        <!--=======  contact segments  =======-->
+
+                        <div class="contact-segments d-flex justify-content-between flex-wrap flex-lg-nowrap">
+                            <div class="single-contact d-flex mb-xs-20">
+                                <div class="icon">
+                                    <span class="icon_mobile"></span>
+                                </div>
+                                <div class="contact-info">
+                                    <a href="tel:+996551666000"> Звоните нам <br>+996-551-666-000 </a>
+                                </div>
+                            </div>
+
+                            <!--=======  End of single contact  =======-->
+                            <!--=======  single contact  =======-->
+
+                            <div class="single-contact d-flex">
+                                <div class="icon">
+                                    <span class="icon_mail_alt"></span>
+                                </div>
+                                <div class="contact-info">
+                                    <a href="mailto:vitaemarket@mail.ru">vitaemarket@mail.ru</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--=======  End of social contact section  =======-->
+
+
+    <!-- JS
+    ============================================ -->
+    <!-- jQuery JS -->
+    <script src="../../static/assets/js/vendor/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="../../static/assets/js/popper.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="../../static/assets/js/bootstrap.min.js"></script>
+
+    <!-- Plugins JS -->
+    <script src="../../static/assets/js/plugins.js"></script>
+
+    <!-- Main JS -->
+    <script src="../../static/assets/js/main.js"></script>
+      <script>
+        function isMobileDevice() {
+    return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+};
+
+        if (isMobileDevice()) {
+            $('.view-mode-icons .active').removeClass('active');
+            $('.view-mode-icons a:eq(1)').addClass("active");
+
+
+            var shopProductWrap = $('.shop-product-wrap');
+            var viewMode = 'list';
+
+            shopProductWrap.removeClass('grid list').addClass(viewMode);
+        }
+      </script>
+</body>
+
+</html>
