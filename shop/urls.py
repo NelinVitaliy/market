@@ -11,6 +11,7 @@ urlpatterns = [
     path('product-detail/<slug:slug>/', product_detail, name='product_detail'),
 
     path('all-products', get_all_products, name='all-products'),
+    path('all-products2', get_all_products2, name='all-products2'),
     path('contact', contact_list, name='contact_list'),
     path('wholesalers', wholesalers_list, name='wholesalers_list'),
 

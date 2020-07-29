@@ -38,6 +38,19 @@ def get_all_products(request):
     return render(request, 'shop/all-products.html', locals())
 
 
+def get_all_products2(request):
+    categories = Category.objects.filter(parent=None)
+    paginator = Paginator(categories, 9)
+    page = request.GET.get('page')
+    try:
+        categories = paginator.page(page)
+    except PageNotAnInteger:
+        categories = paginator.page(1)
+    except EmptyPage:
+        categories = paginator.page(paginator.num_pages)
+    return render(request, 'shop/all-products2.html', locals())
+
+
 def get_product_by_category(request, category_slug=None):
     category = None
     products = None

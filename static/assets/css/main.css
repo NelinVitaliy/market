@@ -110,7 +110,7 @@ body {
 
 @media only screen and (max-width: 479px) {
     body {
-        padding-top: 349px;
+        padding-top: 249px;
     }
 }
 
@@ -658,7 +658,7 @@ header {
 
 @media only screen and (max-width: 479px) {
     .logo img {
-        width: 70px;
+        width: 200px;
     }
 }
 
@@ -953,7 +953,7 @@ header {
 
 @media only screen and (max-width: 479px) {
     .menubar-top {
-        height: 180px;
+        height: 60px;
         -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     }
@@ -4612,6 +4612,7 @@ only screen and (min-width: 768px) and (max-width: 991px) {
 @media only screen and (max-width: 767px) {
     .category-toggle-wrap .category-toggle {
         font-size: 14px;
+        color: black;
     }
 }
 

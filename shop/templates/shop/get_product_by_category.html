@@ -13,6 +13,7 @@
                     <img src="{% if x.image %}{{ x.image.url }}{% else %}{% static "img/no_image.png" %}{% endif %}">
                 </a>
                 <a href="{% url 'shop:product_detail'  x.slug %}">{{ x.name }}</a><br>
+                <a href="{% url 'shop:product_detail'  x.slug %}">Цена: {{ x.cost }} сом</a><br>
             </div>
         </div>
         {% endfor%}

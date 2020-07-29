@@ -212,7 +212,7 @@ figure {
 }
 
 img {
-    vertical-align: middle;
+    vertical-align: super;
     border-style: none
 }
 
