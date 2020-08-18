@@ -69,12 +69,12 @@
                 <div class="col-md-9 col-sm-12 col-xs-12">
                     <div class="menubar-top d-flex justify-content-between align-items-center flex-sm-wrap flex-md-wrap flex-lg-nowrap mt-sm-15">
                         <!-- header search bar -->
-                        <div class="">
-{#                            <form action="#">#}
-{#                                <input type="text" placeholder="Поиск">#}
-{#                                <button><span class="icon_search"></span></button>#}
-{#                            </form>#}
-                        </div>
+                        <!--                        <div class="">-->
+                        <!--                            <form action="#">-->
+                        <!--                                <input type="text" placeholder="Поиск">-->
+                        <!--                                <button><span class="icon_search"></span></button>-->
+                        <!--                            </form>-->
+                        <!--                        </div>-->
                         <!-- end of search bar -->
                         <!-- header phone number -->
                         <div class="header-contact d-flex">
@@ -83,7 +83,8 @@
                             </div>
                             <div class="phone-number">
                                 <div class="cart-info d-inline-block">
-                                    <a href="tel:+996551666000"> Звоните нам <br>+996-551-666-000 </a>
+                                    <!--                                    <a href="tel:+996551666000"> Звоните нам <br>+996-551-666-000 </a>-->
+                                    <a href="https://wa.me/996551666000"> Наш<br> WhatsApp </a>
                                 </div>
                             </div>
                             <!-- end of header phone number -->
@@ -99,7 +100,7 @@
                         <nav>
                             <ul>
                                 <li><a href="{% url 'shop:home_list' %}">Главная</a></li>
-                                <li class="active menu"><a href="{% url 'shop:all-products' %}">Интернет-Магазин</a></li>
+                                <li class="active menu"><a href="{% url 'shop:get_all_category' %}">Интернет-Магазин</a></li>
                                 <li><a href="{% url 'shop:contact_list' %}">Контакты</a></li>
                                 <li><a href="{% url 'shop:wholesalers_list' %}">Оптовый заказ</a></li>
                             </ul>
@@ -159,7 +160,7 @@
                         <h3 class="sidebar-title">Категории продуктов</h3>
                         <ul class="product-categories">
                             <li {% if not category %}class="selected" {% endif %}>
-                                <a class="selected-item" id="all-selected" href="{% url 'shop:all-products' %}">All</a>
+                                <a class="selected-item" id="all-selected" href="{% url 'shop:get_all_category' %}">All</a>
                             </li>
                             {% for c in categories_context %}
                             <li {% if category.slug == c.slug %}class="selected" {% endif %}>
@@ -200,19 +201,16 @@
                         </div>
                         <div class="col-lg-8 col-md-8 col-sm-12 d-flex flex-column flex-sm-row justify-content-between align-items-left align-items-sm-center">
                             <!--=======  Sort by dropdown  =======-->
-
-                            <div class="sort-by-dropdown d-flex align-items-center mb-xs-10">
-                                <p class="mr-10">Cортировать по: </p>
-                                <select name="sort-by" id="sort-by" class="nice-select">
-                                    <option value="0">Популярности</option>
-                                    <option value="0">По Цене: от низкой к высокой</option>
-                                    <option value="0">По Цене: от высокой к низкой</option>
-                                </select>
-                            </div>
-
+                            <form action="" method="get">
+                                <div class="sort-by-dropdown d-flex align-items-center mb-xs-10">
+                                    <p class="mr-10">Cортировать по: </p>
+                                    <select name="sort-by" id="sort-by" class="nice-select">
+                                        <option value="asc" <a href="">По Цене: по возрастанию</a></option>
+                                        <option value="desc" <a href="">По Цене: по убыванию</a></option>
+                                    </select>
+                                </div>
+                            </form>
                             <!--=======  End of Sort by dropdown  =======-->
-
-                            <p class="result-show-message">Отображение результатов</p>
                         </div>
                     </div>
                 </div>
@@ -286,16 +284,16 @@
                                 <button id="mc-submit" type="submit">Подписывайся!</button>
                             </form>
 
-                            <!--                            &lt;!&ndash; mailchimp-alerts Start &ndash;&gt;-->
-                            <!--                            <div class="mailchimp-alerts">-->
-                            <!--                                <div class="mailchimp-submitting"></div>-->
-                            <!--                                &lt;!&ndash; mailchimp-submitting end &ndash;&gt;-->
-                            <!--                                <div class="mailchimp-success"></div>-->
-                            <!--                                &lt;!&ndash; mailchimp-success end &ndash;&gt;-->
-                            <!--                                <div class="mailchimp-error"></div>-->
-                            <!--                                &lt;!&ndash; mailchimp-error end &ndash;&gt;-->
-                            <!--                            </div>-->
-                            <!--                            &lt;!&ndash; mailchimp-alerts end &ndash;&gt;-->
+                            <!--&lt;!&ndash;                                                         mailchimp-alerts Start &ndash;&gt;-->
+                            <!--                                                        <div class="mailchimp-alerts">-->
+                            <!--                                                            <div class="mailchimp-submitting"></div>-->
+                            <!--                                                            &lt;!&ndash; mailchimp-submitting end &ndash;&gt;-->
+                            <!--                                                            <div class="mailchimp-success"></div>-->
+                            <!--                                                            &lt;!&ndash; mailchimp-success end &ndash;&gt;-->
+                            <!--                                                            <div class="mailchimp-error"></div>-->
+                            <!--                                                            &lt;!&ndash; mailchimp-error end &ndash;&gt;-->
+                            <!--                                                        </div>-->
+                            <!--                                                        &lt;!&ndash; mailchimp-alerts end &ndash;&gt;-->
                         </div>
                     </div>
 
@@ -385,10 +383,10 @@
 
     <!-- Main JS -->
     <script src="../../static/assets/js/main.js"></script>
-      <script>
+    <script>
         function isMobileDevice() {
-    return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
-};
+            return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+        };
 
         if (isMobileDevice()) {
             $('.view-mode-icons .active').removeClass('active');
@@ -400,7 +398,7 @@
 
             shopProductWrap.removeClass('grid list').addClass(viewMode);
         }
-      </script>
+    </script>
 </body>
 
 </html>

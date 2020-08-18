@@ -10,9 +10,9 @@ urlpatterns = [
     path('products-detail/<slug:category_slug>/', get_product_by_category, name='product_by_category'),
     path('product-detail/<slug:slug>/', product_detail, name='product_detail'),
 
-    path('all-products', get_all_products, name='all-products'),
+    path('all-products', get_all_products, name='get_all_products'),
+    path('all-category', get_all_category, name='get_all_category'),
     path('contact', contact_list, name='contact_list'),
     path('wholesalers', wholesalers_list, name='wholesalers_list'),
 
-    # path('', base_list, name='base')
 ]

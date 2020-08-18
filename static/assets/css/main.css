@@ -110,7 +110,7 @@ body {
 
 @media only screen and (max-width: 479px) {
     body {
-        padding-top: 349px;
+        padding-top: 255px;
     }
 }
 
@@ -658,7 +658,7 @@ header {
 
 @media only screen and (max-width: 479px) {
     .logo img {
-        width: 70px;
+        width: 190px;
     }
 }
 
@@ -709,8 +709,8 @@ header {
 
 .header-contact .phone-number {
     line-height: 22px;
-    font-size: 19px;
-    color: #8d9198;
+    font-size: 26px;
+    color: #80bb01;
 }
 
 .header-contact .phone-number span.number {
@@ -953,7 +953,7 @@ header {
 
 @media only screen and (max-width: 479px) {
     .menubar-top {
-        height: 180px;
+        height: 80px;
         -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     }
@@ -2287,7 +2287,7 @@ only screen and (min-width: 768px) and (max-width: 991px) {
 
 @media only screen and (max-width: 479px) {
     .hero-slider-two .hero-slider-item {
-        height: 450px;
+        height: 210px;
     }
 }
 
@@ -4734,7 +4734,7 @@ only screen and (min-width: 768px) and (max-width: 991px) {
 
 @media only screen and (max-width: 575px) {
     .hero-side-category nav.category-menu>ul {
-        max-height: 220px;
+        max-height: 450px;
         overflow-y: auto;
     }
 }
