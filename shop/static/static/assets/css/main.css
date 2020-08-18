@@ -110,7 +110,7 @@ body {
 
 @media only screen and (max-width: 479px) {
     body {
-        padding-top: 249px;
+        padding-top: 255px;
     }
 }
 
@@ -658,7 +658,7 @@ header {
 
 @media only screen and (max-width: 479px) {
     .logo img {
-        width: 200px;
+        width: 190px;
     }
 }
 
@@ -953,7 +953,7 @@ header {
 
 @media only screen and (max-width: 479px) {
     .menubar-top {
-        height: 60px;
+        height: 80px;
         -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     }
@@ -2287,7 +2287,7 @@ only screen and (min-width: 768px) and (max-width: 991px) {
 
 @media only screen and (max-width: 479px) {
     .hero-slider-two .hero-slider-item {
-        height: 450px;
+        height: 210px;
     }
 }
 
@@ -4612,7 +4612,6 @@ only screen and (min-width: 768px) and (max-width: 991px) {
 @media only screen and (max-width: 767px) {
     .category-toggle-wrap .category-toggle {
         font-size: 14px;
-        color: black;
     }
 }
 
@@ -4735,7 +4734,7 @@ only screen and (min-width: 768px) and (max-width: 991px) {
 
 @media only screen and (max-width: 575px) {
     .hero-side-category nav.category-menu>ul {
-        max-height: 220px;
+        max-height: 450px;
         overflow-y: auto;
     }
 }

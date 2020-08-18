@@ -37,20 +37,8 @@
     <script src="../../static/assets/js/vendor/modernizr-2.8.3.min.js"></script>
 
 </head>
-
 <body>
-
-<!--=============================================
-=            Header         =
-=============================================-->
-
 <header>
-    <!--=======  header top  =======-->
-
-    <!--=======  End of header top  =======-->
-
-    <!--=======  header bottom  =======-->
-
     <div class="header-bottom header-bottom-one header-sticky">
         <div class="container">
             <div class="row">
@@ -61,18 +49,17 @@
                             <img src="../../static/assets/images/vm-logo.svg" class="img-fluid" alt="">
                         </a>
                     </div>
-                    <!-- end of logo -->
                 </div>
                 <div class="col-md-9 col-sm-12 col-xs-12">
                     <div class="menubar-top d-flex justify-content-between align-items-center flex-sm-wrap flex-md-wrap flex-lg-nowrap mt-sm-15">
 
                         <!-- search bar -->
-                        <div class="">
-{#                            <form action="#">#}
-{#                                <input type="text" placeholder="Поиск">#}
-{#                                <button><span class="icon_search"></span></button>#}
-{#                            </form>#}
-                        </div>
+<!--                        <div class="">-->
+<!--                            <form action="#">-->
+<!--                                <input type="text" placeholder="Поиск">-->
+<!--                                <button><span class="icon_search"></span></button>-->
+<!--                            </form>-->
+<!--                        </div>-->
                         <!-- end of search bar -->
 
                         <!-- header phone number -->
@@ -83,19 +70,15 @@
                             <div class="phone-number">
                                 <div class="cart-info d-inline-block">
                                     <a href="tel:+996551666000"> Звоните нам <br>+996-551-666-000 </a>
-<!--                                    Phone: <span class="number"> +996-551-66-60-00</span>-->
                                 </div>
                             </div>
-                            <!-- end of header phone number -->
                         </div>
                     </div>
-
-                    <!-- navigation section -->
                     <div class="main-menu">
                         <nav>
                             <ul>
                                 <li class="active menu"><a href="{% url 'shop:home_list' %}">Главная</a></li>
-                                <li><a href="{% url 'shop:all-products2'%}">Интернет-Магазин</a></li>
+                                <li><a href="{% url 'shop:get_all_category'%}">Интернет-Магазин</a></li>
                                 <li><a href="{% url 'shop:contact_list' %}">Контакты</a></li>
                                 <li><a href="{% url 'shop:wholesalers_list' %}">Оптовый заказ</a></li>
                             </ul>
@@ -110,15 +93,7 @@
             </div>
         </div>
     </div>
-
-    <!--=======  End of header bottom  =======-->
 </header>
-
-<!--=====  End of Header  ======-->
-
-<!--=============================================
-=            Hero slider with category         =
-=============================================-->
 
 <div class="hero-slider-with-category-container mt-35 mb-35">
     <div class="container">
@@ -138,9 +113,9 @@
                         <ul>
                             {% for c in categories_context %}
                             <li class="menu-item-has-children"><a class="megamenu-head" href="{% url 'shop:product_by_category' c.slug %}">{{ c.name }}</a>
-                            {% endfor %}
-                            <li><a href="{% url 'shop:home_list' %}"><span class="icon_plus_alt2"></span> Еще категории</a></li>
-                       </ul>
+                                {% endfor %}
+                            <li><a href="{% url 'shop:get_all_category' %}"><span class="icon_plus_alt2"></span> Еще категории</a></li>
+                        </ul>
 
                     </nav>
                 </div>
@@ -158,14 +133,14 @@
 
                         <div class="hero-slider-item slider-bg-3">
                             <div class="slider-content">
-                                <h1>Органическая<span>еда</span></h1>
-                                <h1 class="change-text">Скидка до <span>50%</span></h1>
+<!--                                <h1>Органическая еда </h1>-->
+<!--                                <h1 class="change-text">Скидка до <span>50%</span></h1>-->
 
-                                <p><img src="../../static/assets/images/icon-slider.png" alt=""> <span>Экономия до 10%</span></p>
-                                <p><img src="../../static/assets/images/icon-slider.png" alt=""> <span>Бесплатная доставка</span></p>
-                                <p><img src="../../static/assets/images/icon-slider.png" alt=""> <span>Возврат за 24 часа</span></p>
+<!--                                <p><img src="../../static/assets/images/icon-slider.png" alt=""> <span>Экономия до 10%</span></p>-->
+<!--                                <p><img src="../../static/assets/images/icon-slider.png" alt=""> <span>Бесплатная доставка</span></p>-->
+<!--                                <p><img src="../../static/assets/images/icon-slider.png" alt=""> <span>Возврат за 24 часа</span></p>-->
 
-                                <a href="shop-left-sidebar.html" class="slider-two-btn mt-20">Начните покупать сейчас!</a>
+<!--                                <a href="shop-left-sidebar.html" class="slider-two-btn mt-20">Начните покупать сейчас!</a>-->
                             </div>
                         </div>
 
@@ -176,17 +151,16 @@
 
                         <div class="hero-slider-item slider-bg-4">
                             <div class="slider-content">
-                                <h1>Органическая<span>еда</span></h1>
-                                <h1 class="change-text">Скидка до <span>50%</span></h1>
+<!--                                <h1>Органическая еда </h1>-->
+<!--                                <h1 class="change-text">Скидка до <span>50%</span></h1>-->
 
-                                <p><img src="../../static/assets/images/icon-slider.png" alt=""> <span>Экономия до 10%</span></p>
-                                <p><img src="../../static/assets/images/icon-slider.png" alt=""> <span>Бесплатная доставка</span></p>
-                                <p><img src="../../static/assets/images/icon-slider.png" alt=""> <span>Возврат за 24 часа</span></p>
+<!--                                <p><img src="../../static/assets/images/icon-slider.png" alt=""> <span>Экономия до 10%</span></p>-->
+<!--                                <p><img src="../../static/assets/images/icon-slider.png" alt=""> <span>Бесплатная доставка</span></p>-->
+<!--                                <p><img src="../../static/assets/images/icon-slider.png" alt=""> <span>Возврат за 24 часа</span></p>-->
 
-                                <a href="shop-left-sidebar.html" class="slider-two-btn mt-20">Начните покупать сейчас!</a>
+<!--                                <a href="shop-left-sidebar.html" class="slider-two-btn mt-20">Начните покупать сейчас!</a>-->
                             </div>
                         </div>
-                        <!--=======  End of Hero slider item  =======-->
                     </div>
                 </div>
             </div>
@@ -194,261 +168,26 @@
     </div>
 </div>
 
-<!--=====  End of Hero slider with category   ======-->
-<!--=============================================
-=            Policy area         =
-=============================================--
-<div class="policy-section mb-35">
-<div class="container">-->
-<!--        <div class="row">-->
-<!--            <div class="col-lg-12">-->
-<!--                <div class="policy-titles d-flex align-items-center flex-wrap">-->
-<!--                    &lt;!&ndash;=======  single policy  =======&ndash;&gt;-->
-
-<!--                    <div class="single-policy">-->
-<!--                        <span><img src="../../static/assets/images/policy-icon1.png" class="img-fluid" alt=""></span>-->
-<!--                        <p> БЕСПЛАТНАЯ ДОСТАВКА ПО ЗАКАЗУ ОТ </p>-->
-<!--                    </div>-->
-
-<!--                    &lt;!&ndash;=======  End of single policy  =======&ndash;&gt;-->
-
-
-<!--                    &lt;!&ndash;=======  single policy  =======&ndash;&gt;-->
-
-<!--                    <div class="single-policy">-->
-<!--                        <span><img src="../../static/assets/images/policy-icon2.png" class="img-fluid" alt=""></span>-->
-<!--                        <p>30-дневный возврат денег</p>-->
-<!--                    </div>-->
-
-<!--                    &lt;!&ndash;=======  End of single policy  =======&ndash;&gt;-->
-
-<!--                    &lt;!&ndash;=============================================-->
-<!--                    =            single policy         =-->
-<!--                    =============================================&ndash;&gt;-->
-
-<!--                    <div class="single-policy">-->
-<!--                        <span><img src="../../static/assets/images/policy-icon3.png" class="img-fluid" alt=""></span>-->
-<!--                        <p>ПОДДЕРЖКА 24/7 </p>-->
-<!--                    </div>>
--->
-
-                    <!--=====  End of single policy  ======-->
-
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!--=====  End of Policy area  ======-->
-
-<!--=============================================
-=            category slider         =
-=============================================-->
-
-{#<div class="slider category-slider mb-35">#}
-{#    <div class="container">#}
-{#        <div class="row">#}
-{#            <div class="col-lg-12">#}
-                <!--=======  category slider section title  =======-->
-
-{#                <div class="section-title">#}
-{#                    <h3>ТОП категорий</h3>#}
-{#                </div>#}
-{#            </div>#}
-{#        </div>#}
-{#        <div class="row">#}
-{#            <div class="col-lg-12">#}
-{#                <!--=======  category container  =======-->#}
-{#                <div class="category-slider-container">#}
-{#                    <!--=======  single category  =======-->#}
-{#                    {% get_categories as all_categories %}#}
-{#                    {% for category in all_categories %}#}
-{#                    <div class="single-category">#}
-{#                        <div class="category-image">#}
-{#                            <a href="{% url 'shop:all-products' %}" title="">#}
-{#                                {% if category.image %}#}
-{#                                <img src="{{ category.image.url }}" style="width:160px; height:160px;" class="img-fluid" alt="">#}
-{#<!--                                {% else %}-->#}
-{#<!--                                    <p></p>-->#}
-{#<!--                                {% endif %}-->#}
-{#                            </a>#}
-{#                        </div>#}
-{#                        <div class="category-title">#}
-{#                            <h3>#}
-{#                                <a href="{{ get_product_by_category }}">{{ category.name }}</a>#}
-{#                            </h3>#}
-{#                        </div>#}
-{#                    </div>#}
-{#                    {% endfor %}#}
-{#                </div>#}
-{#            </div>#}
-{#        </div>#}
-{#    </div>#}
-{#</div>#}
-
-<!--=====  End of category slider  ======-->
-
-<!--=============================================
-=            Double banner          =
-=============================================-->
-
 <div class="double-banner-section mb-35">
     <div class="container">
         <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-12 mb-xs-35">
-                <!--=======  single banner  =======-->
-
                 <div class="single-banner">
                     <a href="#">
                         <img src="../../static/assets/images/banners/home2-banner1-1.jpg" class="img-fluid" alt="">
                     </a>
                 </div>
-
-                <!--=======  End of single banner  =======-->
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12">
-                <!--=======  single banner  =======-->
-
                 <div class="single-banner">
                     <a href="#">
                         <img src="../../static/assets/images/banners/home2-banner1-2.jpg" class="img-fluid" alt="">
                     </a>
                 </div>
-                <!--=======  End of single banner  =======-->
             </div>
         </div>
     </div>
 </div>
-
-<!--=====  End of Double banner   ======-->
-<!--=============================================
-=            Tab slider         =
-=============================================-->
-<!--=============================================
-=            Best seller slider         =
-=============================================-->
-
-<!--=====  End of Best seller slider  ======-->
-
-<!--=============================================
-=            Blog post slider container         =
-=============================================-->
-
-<!--<div class="slider blog-slider mb-35">-->
-<!--    <div class="container">-->
-<!--        <div class="row">-->
-<!--            <div class="col-lg-12">-->
-<!--                &lt;!&ndash;=======  blog slider section title  =======&ndash;&gt;-->
-
-<!--                <div class="section-title">-->
-<!--                    <h3>Новости Vitae</h3>-->
-<!--                </div>-->
-
-<!--                &lt;!&ndash;=======  End of blog slider section title  =======&ndash;&gt;-->
-<!--            </div>-->
-<!--        </div>-->
-
-<!--        <div class="row">-->
-<!--            <div class="col-lg-12">-->
-<!--                &lt;!&ndash;=======  blog slide container  =======&ndash;&gt;-->
-
-<!--                <div class="blog-slider-container pt-30 pb-30 pr-30 pl-30">-->
-
-                    <!--=======  single blog post  =======-->
-<!--                    <div class="col">-->
-<!--                        <div class="single-post-wrapper">-->
-<!--                            <div class="post-thumb">-->
-<!--                                <a href="#">-->
-<!--                                    <img src="../../static/assets/images/blog-image/blog01.jpg" class="img-fluid" alt="">-->
-<!--                                </a>-->
-<!--                            </div>-->
-<!--                            <div class="post-info">-->
-<!--                                <div class="post-meta">-->
-<!--                                    <div class="post-date">29.04.2020</div>-->
-<!--                                </div>-->
-<!--                                <h3 class="post-title"><a href="#">Blog image post</a></h3>-->
-<!--                                <a href="#" class="readmore-btn">continue <i class="fa fa-arrow-right"></i></a>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-
-                    <!--=======  End of single blog post  =======-->
-
-                    <!--=======  single blog post  =======-->
-<!--                    <div class="col">-->
-<!--                        <div class="single-post-wrapper">-->
-<!--                            <div class="post-thumb">-->
-<!--                                <a href="#">-->
-<!--                                    <img src="../../static/assets/images/blog-image/blog02.jpg" class="img-fluid" alt="">-->
-<!--                                </a>-->
-<!--                            </div>-->
-<!--                            <div class="post-info">-->
-<!--                                <div class="post-meta">-->
-<!--                                    <div class="post-date">29.04.2020</div>-->
-<!--                                </div>-->
-<!--                                <h3 class="post-title"><a href="#">Post with gallery</a></h3>-->
-<!--                                <a href="#" class="readmore-btn">continue <i class="fa fa-arrow-right"></i></a>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-
-                    <!--=======  End of single blog post  =======-->
-
-                    <!--=======  single blog post  =======-->
-<!--                    <div class="col">-->
-<!--                        <div class="single-post-wrapper">-->
-<!--                            <div class="post-thumb">-->
-<!--                                <a href="#">-->
-<!--                                    <img src="../../static/assets/images/blog-image/blog03.jpg" class="img-fluid" alt="">-->
-<!--                                </a>-->
-<!--                            </div>-->
-<!--                            <div class="post-info">-->
-<!--                                <div class="post-meta">-->
-<!--                                    <div class="post-date">29.04.2020</div>-->
-<!--                                </div>-->
-<!--                                <h3 class="post-title"><a href="#">Blog with audio</a></h3>-->
-<!--                                <a href="#" class="readmore-btn">continue <i class="fa fa-arrow-right"></i></a>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-
-                    <!--=======  End of single blog post  =======-->
-
-                    <!--=======  single blog post  =======-->
-<!--                    <div class="col">-->
-<!--                        <div class="single-post-wrapper">-->
-<!--                            <div class="post-thumb">-->
-<!--                                <a href="#">-->
-<!--                                    <img src="../../static/assets/images/blog-image/blog04.jpg" class="img-fluid" alt="">-->
-<!--                                </a>-->
-<!--                            </div>-->
-<!--                            <div class="post-info">-->
-<!--                                <div class="post-meta">-->
-<!--                                    <div class="post-date">29.04.2020</div>-->
-<!--                                </div>-->
-<!--                                <h3 class="post-title"><a href="#">Blog with video</a></h3>-->
-<!--                                <a href="#" class="readmore-btn">continue <i class="fa fa-arrow-right"></i></a>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-
-                    <!--=======  End of single blog post  =======-->
-
-<!--                </div>-->
-
-<!--                &lt;!&ndash;=======  End of blog slide container  =======&ndash;&gt;-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
-
-<!--=====  End of Blog post slider  ======-->
-
-
-<!--=============================================
-=            Brand logo slider         =
-=============================================-->
 
 <div class="slider brand-logo-slider mb-35">
     <div class="container">
@@ -591,16 +330,16 @@
                                 <button id="mc-submit" type="submit">Подписывайся! </button>
                             </form>
 
-<!--                            &lt;!&ndash; mailchimp-alerts Start &ndash;&gt;-->
-<!--                            <div class="mailchimp-alerts">-->
-<!--                                <div class="mailchimp-submitting"></div>-->
-<!--                                &lt;!&ndash; mailchimp-submitting end &ndash;&gt;-->
-<!--                                <div class="mailchimp-success"></div>-->
-<!--                                &lt;!&ndash; mailchimp-success end &ndash;&gt;-->
-<!--                                <div class="mailchimp-error"></div>-->
-<!--                                &lt;!&ndash; mailchimp-error end &ndash;&gt;-->
-<!--                            </div>-->
-<!--                            &lt;!&ndash; mailchimp-alerts end &ndash;&gt;-->
+                            <!--                            &lt;!&ndash; mailchimp-alerts Start &ndash;&gt;-->
+                            <!--                            <div class="mailchimp-alerts">-->
+                            <!--                                <div class="mailchimp-submitting"></div>-->
+                            <!--                                &lt;!&ndash; mailchimp-submitting end &ndash;&gt;-->
+                            <!--                                <div class="mailchimp-success"></div>-->
+                            <!--                                &lt;!&ndash; mailchimp-success end &ndash;&gt;-->
+                            <!--                                <div class="mailchimp-error"></div>-->
+                            <!--                                &lt;!&ndash; mailchimp-error end &ndash;&gt;-->
+                            <!--                            </div>-->
+                            <!--                            &lt;!&ndash; mailchimp-alerts end &ndash;&gt;-->
                         </div>
                     </div>
 
@@ -640,26 +379,12 @@
                         <!--=======  contact segments  =======-->
 
                         <div class="contact-segments d-flex justify-content-between flex-wrap flex-lg-nowrap">
-                            <!--=======  single contact  =======-->
-
-<!--                            <div class="single-contact d-flex mb-xs-20">-->
-<!--                                <div class="icon">-->
-<!--                                    <span class="icon_pin_alt"></span>-->
-<!--                                </div>-->
-<!--                                <div class="contact-info">-->
-<!--                                    <p>Address: <span>123 New Design Str, Melbourne, Australia</span></p>-->
-<!--                                </div>-->
-<!--                            </div>-->
-
-                            <!--=======  End of single contact  =======-->
-                            <!--=======  single contact  =======-->
-
                             <div class="single-contact d-flex mb-xs-20">
                                 <div class="icon">
                                     <span class="icon_mobile"></span>
                                 </div>
                                 <div class="contact-info">
-                                     <a href="tel:+996551666000"> Звоните нам <br>+996-551-666-000 </a>
+                                    <a href="tel:+996551666000"> Звоните нам <br>+996-551-666-000 </a>
                                 </div>
                             </div>
 
@@ -674,275 +399,31 @@
                                     <a href="mailto:vitaemarket@mail.ru">vitaemarket@mail.ru</a>
                                 </div>
                             </div>
-
-                            <!--=======  End of single contact  =======-->
                         </div>
-
-                        <!--=======  End of contact segments  =======-->
-
-
-
                     </div>
-
                     <!--=======  End of contact summery  =======-->
-
                 </div>
             </div>
         </div>
     </div>
 
-    <!--=======  End of social contact section  =======-->
 
-<!--    &lt;!&ndash;=======  footer navigation  =======&ndash;&gt;-->
+    <!-- JS
+    ============================================ -->
+    <!-- jQuery JS -->
+    <script src="../../static/assets/js/vendor/jquery.min.js"></script>
 
-<!--    <div class="footer-navigation-section pt-40 pb-40">-->
-<!--        <div class="container">-->
-<!--            <div class="row">-->
-<!--                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 mb-xs-30">-->
-<!--                    &lt;!&ndash;=======  single navigation section  =======&ndash;&gt;-->
+    <!-- Popper JS -->
+    <script src="../../static/assets/js/popper.min.js"></script>
 
-<!--                    <div class="single-navigation-section">-->
-<!--                        <h3 class="nav-section-title">INFORMATION</h3>-->
-<!--                        <ul>-->
-<!--                            <li> <a href="about-us.html">About Us</a></li>-->
-<!--                            <li> <a href="#">Delivery Information</a></li>-->
-<!--                            <li> <a href="#">Privacy Policy</a></li>-->
-<!--                            <li> <a href="#">Terms & Condition</a></li>-->
-<!--                        </ul>-->
-<!--                    </div>-->
+    <!-- Bootstrap JS -->
+    <script src="../../static/assets/js/bootstrap.min.js"></script>
 
-<!--                    &lt;!&ndash;=======  End of single navigation section  =======&ndash;&gt;-->
-<!--                </div>-->
-<!--                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 mb-xs-30">-->
-<!--                    &lt;!&ndash;=======  single navigation section  =======&ndash;&gt;-->
+    <!-- Plugins JS -->
+    <script src="../../static/assets/js/plugins.js"></script>
 
-<!--                    <div class="single-navigation-section">-->
-<!--                        <h3 class="nav-section-title">MY ACCOUNT</h3>-->
-<!--                        <ul>-->
-<!--                            <li> <a href="my-account.html">My Account</a></li>-->
-<!--                            <li> <a href="wishlist.html">Wishlist</a></li>-->
-<!--                            <li> <a href="cart.html">Shopping Cart</a></li>-->
-<!--                            <li> <a href="#">Newsletter</a></li>-->
-<!--                        </ul>-->
-<!--                    </div>-->
-
-<!--                    &lt;!&ndash;=======  End of single navigation section  =======&ndash;&gt;-->
-<!--                </div>-->
-<!--                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 mb-xs-30">-->
-<!--                    &lt;!&ndash;=======  single navigation section  =======&ndash;&gt;-->
-
-<!--                    <div class="single-navigation-section">-->
-<!--                        <h3 class="nav-section-title">CUSTOMER SERVICE</h3>-->
-<!--                        <ul>-->
-<!--                            <li> <a href="contact.html">Contact</a></li>-->
-<!--                            <li> <a href="#">OUR SERVICE</a></li>-->
-<!--                            <li> <a href="#">RETURNS</a></li>-->
-<!--                            <li> <a href="#">SITE MAP</a></li>-->
-<!--                        </ul>-->
-<!--                    </div>-->
-
-<!--                    &lt;!&ndash;=======  End of single navigation section  =======&ndash;&gt;-->
-<!--                </div>-->
-<!--                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">-->
-<!--                    &lt;!&ndash;=======  single navigation section  =======&ndash;&gt;-->
-
-<!--                    <div class="single-navigation-section">-->
-<!--                        <h3 class="nav-section-title">Extras</h3>-->
-<!--                        <ul>-->
-<!--                            <li> <a href="contact.html">BRANDS</a></li>-->
-<!--                            <li> <a href="#">GIFT VOUCHERS</a></li>-->
-<!--                            <li> <a href="#">AFFILIATES</a></li>-->
-<!--                            <li> <a href="#">SPECIALS</a></li>-->
-<!--                        </ul>-->
-<!--                    </div>-->
-
-<!--                    &lt;!&ndash;=======  End of single navigation section  =======&ndash;&gt;-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-
-    <!--=======  End of footer navigation  =======-->
-
-
-    <!--=======  copyright section  =======-->
-
-<!--    <div class="copyright-section pt-35 pb-35">-->
-<!--        <div class="container">-->
-<!--            <div class="row align-items-md-center align-items-sm-center">-->
-<!--                <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 text-center text-md-left">-->
-<!--                    &lt;!&ndash;=======  copyright text	  =======&ndash;&gt;-->
-
-<!--                    <div class="copyright-segment">-->
-<!--                        <p>-->
-<!--                            <a href="#">Privacy Policy</a>-->
-<!--                            <span class="separator">|</span>-->
-<!--                            <a href="#">Term and conditions</a>-->
-<!--                        </p>-->
-<!--                        <p class="copyright-text">&copy; 2020 <a href="/">Vitae Market</a>. Design by Maker's </p>-->
-<!--                    </div>-->
-
-<!--                    &lt;!&ndash;=======  End of copyright text	  =======&ndash;&gt;-->
-
-<!--                </div>-->
-<!--                <div class="col-lg-8 col-md-6 col-sm-12 col-xs-12">-->
-<!--                    &lt;!&ndash;=======  payment info  =======&ndash;&gt;-->
-
-<!--                    <div class="payment-info text-center text-md-right">-->
-<!--                        <p>Allow payment base on <img src="../../static/assets/images/payment-icon.png" class="img-fluid" alt=""></p>-->
-<!--                    </div>-->
-
-<!--                    &lt;!&ndash;=======  End of payment info  =======&ndash;&gt;-->
-
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-
-<!--    &lt;!&ndash;=======  End of copyright section  =======&ndash;&gt;-->
-<!--</footer>-->
-
-<!--&lt;!&ndash;=====  End of Footer  ======&ndash;&gt;-->
-
-
-<!--&lt;!&ndash;=============================================-->
-<!--=            Quick view modal         =-->
-<!--=============================================&ndash;&gt;-->
-
-<!--<div class="modal fade quick-view-modal-container" id="quick-view-modal-container" tabindex="-1" role="dialog" aria-hidden="true">-->
-<!--    <div class="modal-dialog modal-dialog-centered" role="document">-->
-<!--        <div class="modal-content">-->
-<!--            <div class="modal-header">-->
-<!--                <button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
-<!--                    <span aria-hidden="true">&times;</span>-->
-<!--                </button>-->
-<!--            </div>-->
-<!--            <div class="modal-body">-->
-<!--                <div class="row">-->
-<!--                    <div class="col-lg-5 col-md-6 col-xs-12">-->
-<!--                        &lt;!&ndash; product quickview image gallery &ndash;&gt;-->
-<!--                        <div class="product-image-slider">-->
-<!--                            &lt;!&ndash;Modal Tab Content Start&ndash;&gt;-->
-<!--                            <div class="tab-content product-large-image-list" id="myTabContent">-->
-<!--                                <div class="tab-pane fade show active" id="single-slide1" role="tabpanel" aria-labelledby="single-slide-tab-1">-->
-<!--                                    &lt;!&ndash;Single Product Image Start&ndash;&gt;-->
-<!--                                    <div class="single-product-img img-full">-->
-<!--                                        <img src="../../static/assets/images/products/product01.jpg" class="img-fluid" alt="">-->
-<!--                                    </div>-->
-<!--                                    &lt;!&ndash;Single Product Image End&ndash;&gt;-->
-<!--                                </div>-->
-<!--                                <div class="tab-pane fade" id="single-slide2" role="tabpanel" aria-labelledby="single-slide-tab-2">-->
-<!--                                    &lt;!&ndash;Single Product Image Start&ndash;&gt;-->
-<!--                                    <div class="single-product-img img-full">-->
-<!--                                        <img src="../../static/assets/images/products/product02.jpg" class="img-fluid" alt="">-->
-<!--                                    </div>-->
-<!--                                    &lt;!&ndash;Single Product Image End&ndash;&gt;-->
-<!--                                </div>-->
-<!--                                <div class="tab-pane fade" id="single-slide3" role="tabpanel" aria-labelledby="single-slide-tab-3">-->
-<!--                                    &lt;!&ndash;Single Product Image Start&ndash;&gt;-->
-<!--                                    <div class="single-product-img img-full">-->
-<!--                                        <img src="../../static/assets/images/products/product03.jpg" class="img-fluid" alt="">-->
-<!--                                    </div>-->
-<!--                                    &lt;!&ndash;Single Product Image End&ndash;&gt;-->
-<!--                                </div>-->
-<!--                                <div class="tab-pane fade" id="single-slide4" role="tabpanel" aria-labelledby="single-slide-tab-4">-->
-<!--                                    &lt;!&ndash;Single Product Image Start&ndash;&gt;-->
-<!--                                    <div class="single-product-img img-full">-->
-<!--                                        <img src="../../static/assets/images/products/product04.jpg" class="img-fluid" alt="">-->
-<!--                                    </div>-->
-<!--                                    &lt;!&ndash;Single Product Image End&ndash;&gt;-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                            &lt;!&ndash;Modal Content End&ndash;&gt;-->
-<!--                            &lt;!&ndash;Modal Tab Menu Start&ndash;&gt;-->
-<!--                            <div class="product-small-image-list">-->
-<!--                                <div class="nav small-image-slider" role="tablist">-->
-<!--                                    <div class="single-small-image img-full">-->
-<!--                                        <a data-toggle="tab" id="single-slide-tab-1" href="#single-slide1"><img src="../../static/assets/images/products/product01.jpg"-->
-<!--                                                                                                                class="img-fluid" alt=""></a>-->
-<!--                                    </div>-->
-<!--                                    <div class="single-small-image img-full">-->
-<!--                                        <a data-toggle="tab" id="single-slide-tab-2" href="#single-slide2"><img src="../../static/assets/images/products/product02.jpg"-->
-<!--                                                                                                                class="img-fluid" alt=""></a>-->
-<!--                                    </div>-->
-<!--                                    <div class="single-small-image img-full">-->
-<!--                                        <a data-toggle="tab" id="single-slide-tab-3" href="#single-slide3"><img src="../../static/assets/images/products/product03.jpg"-->
-<!--                                                                                                                class="img-fluid" alt=""></a>-->
-<!--                                    </div>-->
-<!--                                    <div class="single-small-image img-full">-->
-<!--                                        <a data-toggle="tab" id="single-slide-tab-4" href="#single-slide4"><img src="../../static/assets/images/products/product04.jpg"-->
-<!--                                                                                                                alt=""></a>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                            &lt;!&ndash;Modal Tab Menu End&ndash;&gt;-->
-<!--                        </div>-->
-<!--                        &lt;!&ndash; end of product quickview image gallery &ndash;&gt;-->
-<!--                    </div>-->
-<!--                    <div class="col-lg-7 col-md-6 col-xs-12">-->
-<!--                        &lt;!&ndash; product quick view description &ndash;&gt;-->
-<!--                        <div class="product-feature-details">-->
-<!--                            <h2 class="product-title mb-15">Kaoreet lobortis sagittis laoreet</h2>-->
-
-<!--                            <h2 class="product-price mb-15">-->
-<!--                                <span class="main-price">$12.90</span>-->
-<!--                                <span class="discounted-price"> $10.00</span>-->
-<!--                            </h2>-->
-
-<!--                            <p class="product-description mb-20">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco,Proin lectus ipsum, gravida et mattis-->
-<!--                                vulputate, tristique ut lectus</p>-->
-
-
-<!--                            <div class="cart-buttons mb-20">-->
-<!--                                <div class="pro-qty mr-10">-->
-<!--                                    <input type="text" value="1">-->
-<!--                                </div>-->
-<!--                                <div class="add-to-cart-btn">-->
-<!--                                    <a href="#"><i class="fa fa-shopping-cart"></i> Add to Cart</a>-->
-<!--                                </div>-->
-<!--                            </div>-->
-
-
-<!--                            <div class="social-share-buttons">-->
-<!--                                <h3>share this product</h3>-->
-<!--                                <ul>-->
-<!--                                    <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>-->
-<!--                                    <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>-->
-<!--                                    <li><a class="google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>-->
-<!--                                    <li><a class="pinterest" href="#"><i class="fa fa-pinterest"></i></a></li>-->
-<!--                                </ul>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        &lt;!&ndash; end of product quick view description &ndash;&gt;-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-
-<!--    </div>-->
-<!--</div>-->
-<!--&lt;!&ndash;=====  End of Quick view modal  ======&ndash;&gt;-->
-
-<!--&lt;!&ndash; scroll to top  &ndash;&gt;-->
-<!--<a href="#" class="scroll-top"></a>-->
-<!--&lt;!&ndash; end of scroll to top &ndash;&gt;-->
-
-<!-- JS
-============================================ -->
-<!-- jQuery JS -->
-<script src="../../static/assets/js/vendor/jquery.min.js"></script>
-
-<!-- Popper JS -->
-<script src="../../static/assets/js/popper.min.js"></script>
-
-<!-- Bootstrap JS -->
-<script src="../../static/assets/js/bootstrap.min.js"></script>
-
-<!-- Plugins JS -->
-<script src="../../static/assets/js/plugins.js"></script>
-
-<!-- Main JS -->
-<script src="../../static/assets/js/main.js"></script>
+    <!-- Main JS -->
+    <script src="../../static/assets/js/main.js"></script>
 
 </body>
 
