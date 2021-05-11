@@ -1,6 +1,5 @@
 {% load categories_tags %}
 {% load static %}
-
 <!DOCTYPE html>
 <html class="no-js" lang="zxx">
 
@@ -16,7 +15,7 @@
     <!-- CSS
     ============================================ -->
     <!-- Bootstrap CSS -->
-    <link href="../../static/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../static/assets/css/bootstrap.min.css?ver=1" rel="stylesheet">
 
     <!-- FontAwesome CSS -->
     <link href="../../static/assets/css/font-awesome.min.css" rel="stylesheet">
@@ -31,7 +30,7 @@
     <link href="../../static/assets/css/helper.css" rel="stylesheet">
 
     <!-- Main CSS -->
-    <link href="../../static/assets/css/main.css" rel="stylesheet">
+    <link href="../../static/assets/css/main.css?ver=1" rel="stylesheet">
 
     <!-- Base CSS  -->
     <link href="../../static/css/base.css" rel="stylesheet">
@@ -75,20 +74,11 @@
                         <!-- end of search bar -->
                         <!-- header phone number -->
                         <div class="header-contact d-flex">
-                            <div class="phone-icon">
-                                <img src="../../static/assets/images/icon-phone.png" class="img-fluid" alt="">
-                            </div>
-                            <div class="phone-number">
-                                <div class="cart-info d-inline-block">
-                                    <a href="tel:+996551666000"> Звоните нам <br>+996-551-666-000 </a>
-<!--                                    Phone: <span class="number"> +996-551-66-60-00</span>-->
+                            <div class="header-contact d-flex">
+                                <div class="phone-icon">
+                                    <a href="https://wa.me/996551666000"><img src="../../static/assets/images/icon-whatsapp.svg" class="img-fluid-whatsapp" alt=""></a>
                                 </div>
                             </div>
-                            <!-- end of header phone number -->
-
-                            <!-- cart floating box -->
-
-                            <!-- end of cart floating box -->
                         </div>
                     </div>
 
@@ -116,11 +106,11 @@
     <!--=======  End of header bottom  =======-->
 </header>
 
-                    {% block content %}
-                    {% endblock %}
+{% block content %}
+{% endblock %}
 
-                {% block slider %}
-                {% endblock %}
+{% block slider %}
+{% endblock %}
 <footer>
     <!--=======  newsletter section  =======-->
 

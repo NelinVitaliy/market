@@ -1241,7 +1241,6 @@ Author: Siddharth Doshi
         }
     }, r)
 });
-//# sourceMappingURL=jquery-scrollToTop.min.js.map
 
 
 

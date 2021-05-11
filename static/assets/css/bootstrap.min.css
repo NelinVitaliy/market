@@ -197,7 +197,7 @@ code,
 kbd,
 pre,
 samp {
-    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-family: "Rubik", sans-serif;
     font-size: 1em
 }
 
@@ -212,7 +212,7 @@ figure {
 }
 
 img {
-    vertical-align: middle;
+    vertical-align: super;
     border-style: none
 }
 
@@ -562,7 +562,7 @@ kbd kbd {
 
 pre {
     display: block;
-    font-size: 87.5%;
+    font-size: 120%;
     color: #212529
 }
 
@@ -10339,5 +10339,3 @@ a.text-dark:hover {
         border-color: #dee2e6
     }
 }
-
-/*# sourceMappingURL=bootstrap.min.css.map */

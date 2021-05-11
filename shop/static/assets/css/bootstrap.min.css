@@ -513,6 +513,42 @@ mark {
     height: auto
 }
 
+
+.img-fluid-whatsapp {
+    max-width: 40%;
+    float: left;
+}
+
+
+@media (min-width:576px) {
+    .img-fluid-whatsapp {
+        max-width: 40%;
+        float: left;
+    }
+}
+
+@media (min-width:768px) {
+    .img-fluid-whatsapp {
+        max-width: 40%;
+        float: right;
+    }
+}
+
+@media (min-width:992px) {
+    .img-fluid-whatsapp {
+        max-width: 20%;
+        float: right;
+    }
+}
+
+@media (min-width:1200px) {
+    .img-fluid-whatsapp {
+        max-width: 20%;
+        float: right;
+    }
+}
+
+
 .img-thumbnail {
     padding: .25rem;
     background-color: #fff;

@@ -110,7 +110,7 @@ body {
 
 @media only screen and (max-width: 479px) {
     body {
-        padding-top: 255px;
+        padding-top: 249px;
     }
 }
 
@@ -128,7 +128,7 @@ h6 {
 
 h1 {
     font-size: 18px;
-    line-height: 42px;
+    line-height: 22px;
 }
 
 h2 {
@@ -658,7 +658,7 @@ header {
 
 @media only screen and (max-width: 479px) {
     .logo img {
-        width: 190px;
+        width: 200px;
     }
 }
 
@@ -709,8 +709,8 @@ header {
 
 .header-contact .phone-number {
     line-height: 22px;
-    font-size: 26px;
-    color: #80bb01;
+    font-size: 19px;
+    color: #8d9198;
 }
 
 .header-contact .phone-number span.number {
@@ -953,7 +953,7 @@ header {
 
 @media only screen and (max-width: 479px) {
     .menubar-top {
-        height: 80px;
+        height: 60px;
         -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     }
@@ -2287,7 +2287,7 @@ only screen and (min-width: 768px) and (max-width: 991px) {
 
 @media only screen and (max-width: 479px) {
     .hero-slider-two .hero-slider-item {
-        height: 210px;
+        height: 450px;
     }
 }
 
@@ -4612,6 +4612,7 @@ only screen and (min-width: 768px) and (max-width: 991px) {
 @media only screen and (max-width: 767px) {
     .category-toggle-wrap .category-toggle {
         font-size: 14px;
+        color: black;
     }
 }
 
@@ -4734,7 +4735,7 @@ only screen and (min-width: 768px) and (max-width: 991px) {
 
 @media only screen and (max-width: 575px) {
     .hero-side-category nav.category-menu>ul {
-        max-height: 450px;
+        max-height: 500px;
         overflow-y: auto;
     }
 }
